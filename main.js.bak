@@ -1,0 +1,154 @@
+const {
+    WAConnection,
+    MessageType,
+    Presence,
+    Mimetype,
+    GroupSettingChange
+} = require('@adiwajshing/baileys')
+const fs = require('fs')
+const moment = require('moment-timezone')
+const { banner, getBuffer, h2k, generateMessageID, getGroupAdmins, getRandom, start, info, success, close } = require('./lib/functions')
+const { color } = require('./lib/color')
+const welkom = JSON.parse(fs.readFileSync('./database/welkom.json'))
+
+require('./Clara.js')
+nocache('./Clara.js', module => console.log(`${module} Telah Di Perbarui!`))
+
+const starts = async (nathan = new WAConnection()) => {
+    nathan.logger.level = 'warn'
+    nathan.version = [2,2143,3]
+    nathan.browserDescription = ['Faris shop','Chrome', '3.0']
+    console.log(banner)
+console.log(color('[•] [ Faris shop ] [•]'))
+console.log(color('Follow Me On Media Sosial'))
+console.log(color(' ==============================================='))
+console.log(color('│ ○ Instagram : https://Instagram.com/faris_chaerianto              '))
+console.log(color('│ ○ Github : https://github.com/Farischaerianto                      '))
+console.log(color(' ==============================================='))
+    nathan.on('qr', () => {
+        console.log(color('[ SCAN ]','red'), color('Scan Bang Qrnya nanti kadaluarsa'))
+    })
+    nathan.on('credentials-updated', () => {
+		fs.writeFileSync('./session.json', JSON.stringify(client.base64EncodedAuthInfo(), null, '\t'))
+		info('2', 'Login Info Updated')
+	})
+      const sendButImage = async (from, context, fotext, img, but) => {
+    gam = img
+    jadinya = await nathan.prepareMessage(from, gam, MessageType.image)
+    buttonMessagesI = {
+      imageMessage: jadinya.message.imageMessage,
+      contentText: context,
+      footerText: fotext,
+      buttons: but,
+      headerType: 4
+    }
+    nathan.sendMessage(from, buttonMessagesI, MessageType.buttonsMessage)
+  }
+
+    fs.existsSync('./session.json') && nathan.loadAuthInfo('./session.json')
+    nathan.on('connecting', () => {
+        start('2', 'Menghubungkan Kembali...')
+    })
+    nathan.on('open', () => {
+        success('2', 'Bot Telah Tersambung... Bang')
+    })
+    await nathan.connect({timeoutMs: 30*1000})
+        fs.writeFileSync('./session.json', JSON.stringify(nathan.base64EncodedAuthInfo(), null, '\t'))
+
+    nathan.on('chat-update', async (message) => {
+        require('./Clara.js')(nathan, message)
+    })
+nathan.on("group-participants-update", async (anu) => {
+    try {
+      groupMet = await nathan.groupMetadata(anu.jid);
+      groupMembers = groupMet.participants;
+      groupAdmins = getGroupAdmins(groupMembers);
+      mem = anu.participants[0];
+
+      console.log(anu);
+      try {
+        pp_user = await nathan.getProfilePicture(mem);
+      } catch (e) {
+        pp_user =
+          "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png?q=60";
+      }
+      try {
+        pp_grup = await nathan.getProfilePicture(anu.jid);
+      } catch (e) {
+        pp_grup =
+          "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png?q=60";
+      }
+      if (anu.action == "add" && mem.includes(nathan.user.jid)) {
+        nathan.sendMessage(anu.jid, "Halo, Saya NathanBot. Bot Ini Masih Dalam Tahap Pengembangan. Bot Ini Dapat Digunakan Untuk Membuat Sticker Dan Melakukan Perintah Lainnya", "conversation");
+      }
+hehe = await getBuffer(pp_user)
+if (anu.action == 'add' && !mem.includes(nathan.user.jid)) {
+             const mdata = await nathan.groupMetadata(anu.jid)
+             
+             const widih = mdata.participants.length
+             const thu = await nathan.getStatus(anu.participants[0], MessageType.text)
+             const num = anu.participants[0]
+             const wut = await nathan.prepareMessage("0@s.whatsapp.net", hehe, MessageType.location,{ thumbnail: hehe})
+			 const wut2 = wut.message["ephemeralMessage"] ? wut.message.ephemeralMessage : wut
+                let v = nathan.contacts[num] || { notify: num.replace(/@.+/, '') }
+                anu_user = v.vname || v.notify || num.split('@')[0]
+                time_welc = moment.tz('Asia/Jakarta').format('DD/MM/YYYY')
+                time_wel = moment.tz('Asia/Jakarta').format("hh:mm")
+                teks = `Hallo Kak @${num.split('@')[0]}, Selamat Datang di ${mdata.subject}\n\nInfo Member : ┌ Nomor : *${num.split('@')[0]}*\n├ Bio : *${thu.status}*\n└ Member : *${widih}*`
+                tekss = `*${time_wel} - ${time_welc}`
+                welcomeBut = [{buttonId:`Im Nathan`,buttonText:{displayText:'Welcome'},type:1}]
+                welcomeButt = { contentText: `${teks} `, footerText: `${tekss}`, buttons: welcomeBut, headerType: 6, locationMessage: wut2.message.locationMessage}
+                nathan.sendMessage(mdata.id, welcomeButt, MessageType.buttonsMessage, { caption: 'hehe', "contextInfo": { "mentionedJid" : [num], },})
+                 }
+            if (anu.action == 'remove' && !mem.includes(nathan.user.jid)) {
+                const mdata = await nathan.groupMetadata(anu.jid)
+                const num = anu.participants[0]
+                const wut3 = await nathan.prepareMessage("0@s.whatsapp.net", hehe, MessageType.location,{ thumbnail: hehe})
+			    const wut4 = wut3.message["ephemeralMessage"] ? wut3.message.ephemeralMessage : wut3
+                let w = nathan.contacts[num] || { notify: num.replace(/@.+/, '') }
+                anu_user = w.vname || w.notify || num.split('@')[0]
+                time_welc = moment.tz('Asia/Kolkata').format('DD/MM/YYYY')
+                time_wel = moment.tz('Asia/Kolkata').format("hh:mm")
+                widih = mdata.participants.length
+                out = `*Sayonara* 👋 @${num.split('@')[0]}`
+                goodbyeBut = [{buttonId:`Im Nathan`,buttonText:{displayText:'Selamat Tinggal'}, type:1}]
+                tekss = `${time_wel} - ${time_welc}`
+                goodbyeButt = { contentText: `${out}`, footerText: `${tekss}`, buttons: goodbyeBut, headerType: 6, locationMessage: wut3.message.locationMessage}
+                nathan.sendMessage(mdata.id, goodbyeButt, MessageType.buttonsMessage, { caption: 'hehe', "contextInfo": { "mentionedJid" : [num], },})
+                  }
+        } catch (e) {
+            console.log('Error :', e)
+        }
+    })
+}
+
+
+/**
+ * Uncache if there is file change
+ * @param {string} module Module name or path
+ * @param {function} cb <optional> 
+ */
+function nocache(module, cb = () => { }) {
+    console.log('Module', `'${module}'`, 'Sedang Diawasi Oleh Nathan Karena Perubahan')
+    fs.watchFile(require.resolve(module), async () => {
+        await uncache(require.resolve(module))
+        cb(module)
+    })
+}
+
+/**
+ * Uncache a module
+ * @param {string} module Module name or path
+ */
+function uncache(module = '.') {
+    return new Promise((resolve, reject) => {
+        try {
+            delete require.cache[require.resolve(module)]
+            resolve()
+        } catch (e) {
+            reject(e)
+        }
+    })
+}
+
+starts()

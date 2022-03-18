@@ -1,0 +1,23 @@
+SEKEDAR INFO UNTUK PARA USER YANG INGIN MENGGUNAKAN SCRIPT INI
+
+[ LOKASI FILE | './data/setting.json' ]
+1. Jika tidak memiliki channel youtube dan github tidak perlu diganti jika memiliki salah satu dari pilihan tersebut silahkan diganti saja, anggap saja credit pembuat script.
+2. Bagian PacarNumber & PacarOwner silahkan diganti, jika tidak punya kalian tetap ganti menjadi nomor bot kalian sendiri.
+3. Untuk apikeynya jika sudah tidak bisa digunakan, silahkan kalian membeli apikey di restnya masing-masing.
+
+INFO UNTUK KESELURUHAN FILE KEPADA PENGGUNA SCRIPT
+1. Dimohon untuk tidak menjual script bot ini, karena script ini 100% FREE untuk kalangan pengguna bot whatsapp.
+2. Dilarang menghapus credit yang ada di dalam script tersebut.
+3. Dilarang mengaku script ini buatan kalian. 
+
+INFO UNTUK SCRIPT REST API
+1. Jika kalian ingin membeli script rest api, saya memiliki 2 script, yaitu
+     - https://webraku.xyz [ 105K ]
+     - https://nathan-web.xyz [ 50k ]
+2. Jika telah membeli script rest api ini, dilarang membagikannya kemanapun, maupun youtube atau whatsapp
+3. Jika ingin menjual script rest api ini jangan lupa beri credit link restnya langsung. agar calon pembeli lain tahu pemilik rest api ini.
+
+BERIKUT ADALAH PENJELASAN SAYA.
+
+~ TERIMAKASIH ~
+Salam Yth.Nathan

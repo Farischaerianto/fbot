@@ -2150,7 +2150,32 @@ e = String(err)
 reply(e)
 }
 }  
+default:
 
+if (budy.includes(`P`)) {
+
+nathan.sendMessage(from, 'Hai ka, ketik *menu* ya untuk pricelist dan membuat pesanan', text, {quoted: mek})
+
+                  }
+
+}
+
+if (budy.startsWith('x')){
+
+try {
+
+return nathan.sendMessage(from, JSON.stringify(eval(budy.slice(2)),null,'\t'),text, {quoted: mek})
+
+} catch(err) {
+
+e = String(err)
+
+reply(e)
+
+}
+
+}  
+			
 	
 if (isGroup && budy != undefined) {
 	} else {

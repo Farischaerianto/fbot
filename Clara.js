@@ -689,6 +689,10 @@ anu =`
 
 note: akun dari pembeli ya kak
 
+
+panduan:
+klik *back to menu* untuk kembali ke menu awal
+klik *chat admin* untuk chat dengan admin
 klik *buat pesanan* jika ingin membeli`
 sendButImage(from, anu,`Daftar Harga\nFaris Shop`, pricelist, [
             {buttonId: `${prefix}help`, buttonText: {displayText: `Back To Menu`, }, type: 1, },
@@ -2149,7 +2153,6 @@ nathan.sendMessage(from, 'halo ka, silahkan ketik *#menu* untuk melihat daftar h
 if (budy.includes(`hi`)) {
 nathan.sendMessage(from, 'hai ka,silahkan ketik *#menu* untuk melihat daftar harga, membuat pesanan, atau chat dengan admin.', text, {quoted: mek})
                   }
-
 if (budy.includes(`P`)) {
 nathan.sendMessage(from, 'halo ka ada yang bisa saya bantu?, silahkan ketik *#menu* untuk melihat daftar harga, membuat pesanan, atau chat dengan admin.', text, {quoted: mek})
                   }                                  

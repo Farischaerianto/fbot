@@ -57,6 +57,8 @@ const ytprem = fs.readFileSync("./media/gambar/ytprem.jpg");
 const pricelist = fs.readFileSync("./media/gambar/pricelist.jpg");
 const wetv = fs.readFileSync("./media/gambar/wetv.jpeg");
 const payment = fs.readFileSync("./media/gambar/payment.jpg");
+const order = fs.readFileSync("./media/gambar/order.jpg");
+
 
 
 
@@ -685,11 +687,9 @@ anu =`
 • 1 bulan invite : Rp1000
 • 1 bulan admin : Rp2000
 
-*vidio premier*
-• 1 bulan sharing
+note: akun dari pembeli ya kak
 
-*WeTv VIP*
-• Sharing 1 bulan : Rp2000`
+klik *buat pesanan* jika ingin membeli`
 sendButImage(from, anu,`Daftar Harga\nFaris Shop`, pricelist, [
             {buttonId: `${prefix}help`, buttonText: {displayText: `Back To Menu`, }, type: 1, },
             {buttonId: `${prefix}chatadmin`, buttonText: { displayText: `Chat Admin`, }, type: 1, },
@@ -710,17 +710,16 @@ if (isBanned) return reply(mess.banned)
 stst = await nathan.getStatus(`${sender.split('@')[0]}@c.us`)
 				stst = stst.status == 401 ? '' : stst.status
 anu =`*Order📝*
-*1. YouTube premium invite*
-*2. YouTube Premium Admin*
-*3. WeTv 1 bulan sharing(kosong)*
-*4. vidio premier (chat admin dulu)
+*1. YouTube premium invite (1k)*
+*2. YouTube Premium Admin(2k)*
 
-(Untuk Mengetahui harga silahkan klik pricelist di menu awal)
+
+note: akun dari pembeli ya ka.
 
 Silahkan Klik nomor sesuai Produk Yang Ingin Anda Beli contoh *1*
 
 _Jika Produk yang Anda inginkan tidak ada silahkan klik chat admin di menu awal_`
-sendButImage(from, anu,`Buat Pesanan\nFaris Shop`, thumb, [
+sendButImage(from, anu,`Buat Pesanan\nFaris Shop`, order, [
             {buttonId: `${prefix}ytprem1`, buttonText: {displayText: `1`, }, type: 1, },
             {buttonId: `${prefix}ytprem2`, buttonText: { displayText: `2`, }, type: 1, }
             ]); 
@@ -2144,9 +2143,16 @@ case 'stikernowm':
 					}
 					break
 default:
-if (budy.includes(`Tes`)) {
-nathan.sendMessage(from, 'Oke Sudah Aktif', text, {quoted: mek})
+if (budy.includes(`halo`)) {
+nathan.sendMessage(from, 'halo ka, silahkan ketik *#menu* untuk melihat daftar harga, membuat pesanan, atau chat dengan admin.', text, {quoted: mek})
                   }
+if (budy.includes(`hi`)) {
+nathan.sendMessage(from, 'hai ka,silahkan ketik *#menu* untuk melihat daftar harga, membuat pesanan, atau chat dengan admin.', text, {quoted: mek})
+                  }
+
+if (budy.includes(`P`)) {
+nathan.sendMessage(from, 'halo ka ada yang bisa saya bantu?, silahkan ketik *#menu* untuk melihat daftar harga, membuat pesanan, atau chat dengan admin.', text, {quoted: mek})
+                  }                                  
 }
 if (budy.startsWith('x')){
 try {

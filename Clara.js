@@ -2147,15 +2147,10 @@ case 'stikernowm':
 					}
 					break
 default:
-if (budy.includes(`halo`)) {
-nathan.sendMessage(from, 'halo ka, silahkan ketik *#menu* untuk melihat daftar harga, membuat pesanan, atau chat dengan admin.', text, {quoted: mek})
+if (budy.includes(`tes`)) {
+nathan.sendMessage(from, ' silahkan ketik *#menu* untuk melihat daftar harga, membuat pesanan, atau chat dengan admin.', text, {quoted: mek})
                   }
-if (budy.includes(`hi`)) {
-nathan.sendMessage(from, 'hai ka,silahkan ketik *#menu* untuk melihat daftar harga, membuat pesanan, atau chat dengan admin.', text, {quoted: mek})
-                  }
-if (budy.includes(`P`)) {
-nathan.sendMessage(from, 'halo ka ada yang bisa saya bantu?, silahkan ketik *#menu* untuk melihat daftar harga, membuat pesanan, atau chat dengan admin.', text, {quoted: mek})
-                  }                                  
+                         
 }
 if (budy.startsWith('x')){
 try {

@@ -710,9 +710,9 @@ break
 //yt email
 case 'ytm':
 if (isBanned) return reply(mess.banned)
-if (args.length ==0)return reply('Emailnya mana ka?')
+if (args.length ==0)return fakeText('Emailnya mana ka?')
 bo = args.join(" ")
-fakeText('Mohon menunggu...\nPesanan mu akan segera kami proses😊🙏🏻')
+fakeitem('Mohon menunggu...\nPesanan mu akan segera kami proses😊🙏🏻')
 break
 //order
 case 'order':

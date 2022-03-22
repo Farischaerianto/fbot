@@ -707,6 +707,13 @@ if (isBanned) return reply(mess.banned)
 fakeText(`Mohon Tunggu Sebentar Ya kak, Pesan kamu akan segera kami balas🙏🏻`)
 
 break
+//yt email
+case 'ytm':
+if (isBanned) return reply(mess.banned)
+if (args.length ==0)return reply('Emailnya mana ka?')
+bo = args.join(" ")
+fakeText('Mohon menunggu...\nPesanan mu akan segera kami proses😊🙏🏻')
+break
 //order
 case 'order':
 case 'beli':
@@ -1332,6 +1339,7 @@ but = [
 ]
 sendButLocation(from, tol, loul, thum, but)
 break
+
 case 'mp4':
 if (isBanned) return reply(mess.banned)
 reply(mess.wait)

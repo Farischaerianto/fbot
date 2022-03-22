@@ -712,7 +712,7 @@ case 'ytm':
 if (isBanned) return reply(mess.banned)
 if (args.length ==0)return fakeText('Emailnya mana ka?')
 bo = args.join(" ")
-fakeitem('Mohon menunggu...\nPesanan mu akan segera kami proses😊🙏🏻')
+fakeText('Mohon menunggu...\nPesanan mu akan segera kami proses😊🙏🏻')
 break
 //order
 case 'order':

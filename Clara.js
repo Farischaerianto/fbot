@@ -714,17 +714,16 @@ break
 //yt email
 case 'ytm':
 if (isBanned) return reply(mess.banned)
-if (args.length ==0)return fakeText('Emailnya mana ka?')
 const inipesannya = body.slice(7)
 					if (args.length > 300) return nathan.sendMessage(from, 'Maaf Teks Terlalu Panjang, Maksimal 300 Teks', msgType.text, {quoted: mek})
 					stod = `${sender}`
-					const repo = `*[Pesanan baru]*\nNomor : @${stod.split('@')[0]}\nEmail : ${inipesannya}\nTanggal:${tanggal}`
+					const repo = `*[Pesanan baru]*\nNomor : @${stod.split('@')[0]}\nEmail : ${inipesannya}\nTanggal:${tanggal}\nwaktu:${jam}\nwaktu wib:${timeWib}`
 							var options = {
 							text: repo,
                          				contextInfo: {mentionedJid: [stod]},
                      			}
 					nathan.sendMessage(`${nomorowner}@s.whatsapp.net`, options, text, {quoted: mek})
-					reply('Request Telah Tersampaikan Ke Owner, Sialhkan Menunggu Jawaban. Request Palsu/Main-Main Tidak Akan Ditanggapi.')
+					reply('Mohon menunggu.. Pesanan anda akan segera kami proses dalam 2-12 menit,kami akan memberi tahu anda jika sudah,Terimakasih')
 					break
 //order
 case 'order':

@@ -714,8 +714,7 @@ break
 //yt email
 case 'ytm':
 if (isBanned) return reply(mess.banned)
-const inipesannya = body.slice(8311)
-					if (args.length > 300) return nathan.sendMessage(from, 'Maaf Teks Terlalu Panjang, Maksimal 300 Teks', msgType.text, {quoted: mek})
+		if (args.length > 300) return nathan.sendMessage(from, 'Maaf Teks Terlalu Panjang, Maksimal 300 Teks', msgType.text, {quoted: mek})
 					stod = `${sender}`
 					const repo = `*[Pesanan baru]*\nNomor : @${stod.split('@')[0]}\nEmail : ${inipesannya}\nTanggal:${tanggal}\nwaktu:${jam}\nwaktu wib:${timeWib}`
 							var options = {

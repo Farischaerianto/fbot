@@ -659,17 +659,15 @@ _*Selamat Datang Di Faris Shop*_
 *•Bergaransi*
 *•Terpercaya*
 *•amanah*
-•Harga murahh*
-•produk berkualitas
-•dll
+*•Harga murahh*
+*•produk berkualitas*
+*•dll*
 
 panduan:
 klik *Price List* untuk melihat harga
 klik *Order* untuk memesan
-klik *Chat Admin* jika ingin bertanya dengan admin
-
-silahkan pilih menu di bawah ini👇🏻`
-sendButImage(from, anu,`Faris Shop\n${Tanggal}`, thumb, [
+klik *Chat Admin* jika ingin bertanya dengan admin`
+sendButImage(from, anu,`Silahkan pilih menu di bawah ini`, thumb, [
             {buttonId: `${prefix}pricelist`, buttonText: {displayText: `Price List`, }, type: 1, },
             {buttonId: `${prefix}order`, buttonText: { displayText: `Order`, }, type: 1, },
              {buttonId: `${prefix}chatadmin`, buttonText: { displayText: `Chat Admin`, }, type: 1, },
@@ -684,17 +682,24 @@ stst = await nathan.getStatus(`${sender.split('@')[0]}@c.us`)
 anu =`
 *Price List🏷️*
 *YouTube Premium*
-• 1 bulan invite : Rp1000
-• 1 bulan admin : Rp2000
+• 1 bulan invite : Rp1000 
+• 1 bulan admin : Rp2500 (bisa menginvite 5 akun)
+
+YouTube Premium adalah layanan berlangganan streaming berbayar yang menyediakan 
+streaming bebas iklan untuk semua video yang dihosting oleh YouTube,
+konten asli eksklusif yang diproduksi dalam kolaborasi dengan pembuat utama situs,
+serta pemutaran offline dan pemutaran latar belakang video di ponsel perangkat.
 
 note: akun dari pembeli ya kak
+akun dari admin nambah 2 ribu
+kalau mau chat admin ya
 
 
 panduan:
 klik *back to menu* untuk kembali ke menu awal
 klik *chat admin* untuk chat dengan admin
 klik *buat pesanan* jika ingin membeli`
-sendButImage(from, anu,`Daftar Harga\nFaris Shop`, pricelist, [
+sendButImage(from, anu,`Daftar Harga`, pricelist, [
             {buttonId: `${prefix}help`, buttonText: {displayText: `Back To Menu`, }, type: 1, },
             {buttonId: `${prefix}chatadmin`, buttonText: { displayText: `Chat Admin`, }, type: 1, },
                         {buttonId: `${prefix}order`, buttonText: { displayText: `buat pesanan`, }, type: 1, }
@@ -712,7 +717,7 @@ case 'ytm':
 if (isBanned) return reply(mess.banned)
 if (args.length ==0)return fakeText('Emailnya mana ka?')
 bo = args.join(" ")
-fakeText('Mohon menunggu...\nPesanan mu akan segera kami proses😊🙏🏻')
+fakeText('Mohon menunggu...\nPesanan mu akan segera kami proses')
 break
 //order
 case 'order':

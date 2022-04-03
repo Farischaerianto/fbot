@@ -745,9 +745,9 @@ break
 case 'ytprem1':
 if (isBanned) return reply(mess.banned)
 anu =`*YouTube Premium 1 bulan invite*
-Silahkan Ketikkan email anda, jika sudah mengirimkan email klik tombol *Sudah*.`
+Silahkan Ketikkan email anda menggunakan format seperti contoh berikut
+contoh: #ytm emailkamu@gmail.com .`
 sendButImage(from, anu,`Youtube Premium\nFaris Shop`, ytprem, [
-            {buttonId: `${prefix}sudahkirim`, buttonText: {displayText: `Sudah`, }, type: 1, },
             {buttonId: `${prefix}payment`, buttonText: {displayText: `Bayar`, }, type: 1, }
                   ]); 
 break

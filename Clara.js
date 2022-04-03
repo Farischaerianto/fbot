@@ -717,9 +717,9 @@ if (isBanned) return reply(mess.banned)
 		const pesanorder = body.slice(7)
 		if (args.length > 300) return nathan.sendMessage(from, 'Maaf Teks Terlalu Panjang, Maksimal 300 Teks', msgType.text, {quoted: mek})
 					stod = `${sender}`
-					const repo = `*[Pesanan baru]*\nNomor : @${stod.split('@')[0]}\nEmail : ${pesanorder}\nTanggal:${tanggal}\nwaktu:${jam}\nwaktu wib:${timeWib}`
+					const orderpesan = `*[Pesanan baru]*\nNomor : @${stod.split('@')[0]}\nEmail : ${pesanorder}\nTanggal:${tanggal}\nwaktu:${jam}\nwaktu wib:${timeWib}`
 							var options = {
-							text: repo,
+							text: orderpesan,
                          				contextInfo: {mentionedJid: [stod]},
                      			}
 					nathan.sendMessage(`${nomorowner}@s.whatsapp.net`, options, text, {quoted: mek})

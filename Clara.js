@@ -717,13 +717,13 @@ if (isBanned) return reply(mess.banned)
 		const pesanorder = body.slice(7)
 		if (args.length > 300) return nathan.sendMessage(from, 'Maaf Teks Terlalu Panjang, Maksimal 300 Teks', msgType.text, {quoted: mek})
 					stod = `${sender}`
-					const orderpesan = `*[Pesanan baru]*\nNomor : @${stod.split('@')[0]}\nEmail : ${pesanorder}\nTanggal:${tanggal}\nwaktu:${jam}\nwaktu wib:${timeWib}`
+					const orderpesan = `*[Pesanan baru]*\nNomor : @${stod.split('@')[0]}\nEmail : ${pesanorder}\nTanggal:${tanggal}\nwaktu:${jam}`
 							var options = {
 							text: orderpesan,
                          				contextInfo: {mentionedJid: [stod]},
                      			}
 					nathan.sendMessage(`${nomorowner}@s.whatsapp.net`, options, text, {quoted: mek})
-					reply('Mohon menunggu.. Pesanan anda akan segera kami proses dalam 2-12 menit,kami akan memberi tahu anda jika sudah,Terimakasih')
+					reply('*Detail Pesanan*\n*Youtube Premium 1 bulan(invite)*\nEmail= ${pesanorder}\nTanggal&Waktu Pemesanan= ${tanggal}${Jam}\n\nMohon menunggu.. Pesanan anda akan segera kami proses dalam 2-12 menit,kami akan memberi tahu anda jika sudah,Terimakasih🥰🙏')
 					break
 //order
 case 'order':

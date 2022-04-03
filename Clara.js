@@ -680,6 +680,7 @@ if (isBanned) return reply(mess.banned)
 stst = await nathan.getStatus(`${sender.split('@')[0]}@c.us`)
 				stst = stst.status == 401 ? '' : stst.status
 anu =`
+${ucapanFakereply}
 *Price List🏷️*
 *YouTube Premium*
 • 1 bulan invite : Rp1000 

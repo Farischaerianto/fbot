@@ -679,9 +679,7 @@ case 'Price List':
 if (isBanned) return reply(mess.banned)
 stst = await nathan.getStatus(`${sender.split('@')[0]}@c.us`)
 				stst = stst.status == 401 ? '' : stst.status
-anu =`
-${ucapanFakereply}
-*Price List🏷️*
+anu =`*Price List🏷️*
 *YouTube Premium*
 • 1 bulan invite : Rp1000 
 • 1 bulan admin : Rp2500 (bisa menginvite 5 akun)
@@ -717,9 +715,17 @@ break
 case 'ytm':
 if (isBanned) return reply(mess.banned)
 if (args.length ==0)return fakeText('Emailnya mana ka?')
-bo = args.join(" ")
-fakeText('Mohon menunggu...\nPesanan mu akan segera kami proses')
-break
+const inipesannya = body.slice(7)
+					if (args.length > 300) return nathan.sendMessage(from, 'Maaf Teks Terlalu Panjang, Maksimal 300 Teks', msgType.text, {quoted: mek})
+					stod = `${sender}`
+					const repo = `*[Pesanan baru]*\nNomor : @${stod.split('@')[0]}\nEmail : ${inipesannya}\nTanggal:${tanggal}`
+							var options = {
+							text: repo,
+                         				contextInfo: {mentionedJid: [stod]},
+                     			}
+					nathan.sendMessage(`${nomorowner}@s.whatsapp.net`, options, text, {quoted: mek})
+					reply('Request Telah Tersampaikan Ke Owner, Sialhkan Menunggu Jawaban. Request Palsu/Main-Main Tidak Akan Ditanggapi.')
+					break
 //order
 case 'order':
 case 'beli':

@@ -681,8 +681,8 @@ stst = await nathan.getStatus(`${sender.split('@')[0]}@c.us`)
 				stst = stst.status == 401 ? '' : stst.status
 anu =`*Price List🏷️*
 *YouTube Premium*
-• 1 bulan invite : Rp1000 
-• 1 bulan admin : Rp2500 (bisa menginvite 5 akun)
+• 1 bulan invite : Rp1000 (hanya untuk sendiri)
+• 1 bulan admin : Rp2000 (bisa menginvite 5 akun)
 
 YouTube Premium adalah layanan berlangganan streaming berbayar yang menyediakan 
 streaming bebas iklan untuk semua video yang dihosting oleh YouTube,

@@ -888,7 +888,66 @@ nathan.sendMessage(from, bf, image, { quoted: froxx })
 break
 
 //━━━━━━━━━━━━━━━[ ANIMATION ANIMALS ]━━━━━━━━━━━━━━━\\
+		
 
+
+case 'testlistmenu':
+
+ listMsg = {
+
+ buttonText: 'Buttons',
+
+ footerText: '🌀 𝘊𝘳𝘦𝘢𝘵𝘦𝘥 𝘉𝘺 𝘈𝘣𝘪𝘭𝘉𝘰𝘵𝘻',
+
+ description: `Hai kak @${sender.split('@')[0]}, Mau Sewabot Ya?
+
+ Nih Kak Listnya
+
+ 
+
+ *Permanen*
+
+ Rp 15.000
+
+ *Perbulan*
+
+ Rp 10.000
+
+ *Perminggu*
+
+ Rp 5.000
+
+ 
+
+ *Note : Beli Tinggal Beli Kak Fitur Cek Sendiri Gk Usah Banyak Nanya Atau Basa Basi Soalnya Owner Sibuk 🙏*`,
+
+ sections: [
+
+                     {
+
+                      "title": `ListButMessage`,
+
+ rows: [
+
+                          {
+
+                              "title": "☰ Owner / Pemilik Bot",
+
+                              "rowId": ".owner"
+
+                           }
+
+                        ]
+
+                     }],
+
+ listType: 1
+
+}
+
+nathan.sendMessage(from, listMsg, MessageType.listMessage, {contextInfo: { mentionedJid: [sender]},quoted:fstatus})
+
+break
 case 'script':
 case 'sc':
 teks =

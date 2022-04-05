@@ -71,6 +71,7 @@ ZeksKey = 'apivinz'
 //centang iji cr
 
 //centang ijo
+
 //━━━━━━━━━━━━━━━[ RESPONSE ]━━━━━━━━━━━━━━━\\
 
 autorespon = true
@@ -137,6 +138,14 @@ const getCmd = (id) => {
     return scommand[position].chats;
   }
 };  
+//Auto read
+if (autoread){
+nathan.chatRead(from, "read")
+} else if (autocomposing) {
+flob.updatePresence(from, Presence.composing)
+} else if (autorecording) {
+flob.updatePresence(from, Presence.recording)
+}
 
 //━━━━━━━━━━━━━━━[ EXPORTS & FUNCTION ]━━━━━━━━━━━━━━━\\
 

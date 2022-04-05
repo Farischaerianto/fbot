@@ -139,10 +139,6 @@ const getCmd = (id) => {
   }
 };  
 //Auto read
-if (autoread){
-nathan.chatRead(from, "read")
-}
-
 
 //━━━━━━━━━━━━━━━[ EXPORTS & FUNCTION ]━━━━━━━━━━━━━━━\\
 

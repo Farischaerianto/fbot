@@ -75,10 +75,10 @@ ZeksKey = 'apivinz'
 //━━━━━━━━━━━━━━━[ RESPONSE ]━━━━━━━━━━━━━━━\\
 
 autorespon = true
-autoread = true
 autocomposing = true
 autorecording = true
 AutoRespon: true
+autoread = true
 
 //━━━━━━━━━━━━━━━[ PUBLIC ]━━━━━━━━━━━━━━━\\
 
@@ -141,11 +141,8 @@ const getCmd = (id) => {
 //Auto read
 if (autoread){
 nathan.chatRead(from, "read")
-} else if (autocomposing) {
-flob.updatePresence(from, Presence.composing)
-} else if (autorecording) {
-flob.updatePresence(from, Presence.recording)
 }
+
 
 //━━━━━━━━━━━━━━━[ EXPORTS & FUNCTION ]━━━━━━━━━━━━━━━\\
 

@@ -1,4 +1,4 @@
-//CREATOR SC + BASE ORI : NATHAN
+//CREATOR SC + ORI : NATHAN
 //DILARANG HAPUS CREDITNYA YA COK
 //MOFAL EDIT NAMA DOANG BANGGA
 //GAK USAH DIJUAL YA SU
@@ -2156,43 +2156,4 @@ case 'stikernowm':
 						const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
 						const media = await nathan.downloadAndSaveMediaMessage(encmedia)
 						reply(mess.wait)
-						await recognize(media, {lang: 'eng+ind', oem: 1, psm: 3})
-							.then(teks => {
-								reply(teks.trim())
-								fs.unlinkSync(media)
-							})
-							.catch(err => {
-								reply(err.message)
-								fs.unlinkSync(media)
-							})
-					} else {
-						reply('Kirim Fotonya')
-					}
-					break
-default:
-if (budy.includes(`tes`)) {
-nathan.sendMessage(from, ' silahkan ketik *#menu* untuk melihat daftar harga, membuat pesanan, atau chat dengan admin.', text, {quoted: mek})
-                  }
-                         
-}
-if (budy.startsWith('x')){
-try {
-return nathan.sendMessage(from, JSON.stringify(eval(budy.slice(2)),null,'\t'),text, {quoted: mek})
-} catch(err) {
-e = String(err)
-reply(e)
-}
-}  
-	
-if (isGroup && budy != undefined) {
-	} else {
-	console.log(color('[ TEXT ]', 'red'), 'WhatsApp', color(sender.split('@')[0]))
-	}		
-	} catch (e) {
-    e = String(e)
-    if (!e.includes("this.isZero") && !e.includes("jid")) {
-	console.log('Message : %s', color(e, 'green'))
-        }
-	// console.log(e)
-	}
-}
+						await recognize(media, {lang
